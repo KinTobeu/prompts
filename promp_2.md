@@ -1,3 +1,11 @@
+
+add to Step 1:
+Use PROJECT exactly as the user typed it. Never correct or guess a project key.
+If the project does not exist, reply: RELEASE_TICKET: PROJECT_NOT
+
+
+
+
 **Station 1: Release Ticket Finder** 🔧
 
 Give each station **its own page** so you can test and fix it alone, like a part on a workbench before it goes in the car.
