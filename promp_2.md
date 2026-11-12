@@ -1,4 +1,54 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Station 5 – Placeholders | 2026-11-12              -->
+<!-- ============================================================ -->
+
+**4 out of 4, first try.** 🏁 That's the skeleton paying off: you're no longer fixing format bugs, just checking results.
+
+---
+
+**Station 5: The leftovers (sections 2, 3, 7, 8)**
+
+**Lesson first: not everything needs a brain.** 🧠 A car's chassis comes off a mould; it doesn't need a robot to *think*. Two of these sections are just empty tables for humans. Only two need a quick Jira check.
+
+| Section | Smart or fixed? |
+|---|---|
+| 2 Components / versions | 🔩 Fixed: blank table, "TBC – EL to provide" |
+| 3 Key dependencies | 🧠 Check the release ticket's **linked issues** (blocks / depends on) |
+| 7 Risks | 🧠 Check linked issues of type **Risk** |
+| 8 Incidents | 🔩 Fixed: blank table, "Post-live – fill after go-live" |
+
+**Create `Agent 05 – Placeholders`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: no RELEASE_TICKET** → "I need: • RELEASE_TICKET (e.g. BTFM-13034)"
+> **B: given** → reply with ONLY the 4 sections below.
+>
+> **Section 2: Components:** table `Component | Team | Repository | New Version | Previous Version | Comments` with one row: `TBC – EL to provide` in every cell. **Never fill in version numbers or hashes.**
+>
+> **Section 3: Dependencies:** check RELEASE_TICKET's linked issues with link types "blocks", "is blocked by" or "depends on".
+> - Found → table `Ref | Description | Team | Status`
+> - None → `No key dependencies identified – PO to confirm`
+>
+> **Section 7: Risks:** check linked issues of type "Risk".
+> - Found → table `Risk Ref | Summary | Severity | Status`
+> - None → `No risks raised – PO to confirm`
+>
+> **Section 8: Incidents:** table `Incident No. | Priority | Summary | Owner | Status` with one row: `Post-live – complete after go-live`
+
+**Answer key (1.11):** sections 2, 3, 7 and 8 should all come out as "TBC / none / post-live", since Joane's were empty or manual.
+
+> Execute "Agent 05 – Placeholders" with RELEASE_TICKET = BTFM-13034
+
+**Your task:** Did all 4 sections come out, and did section 2 stay **empty**, with no invented hashes?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Station 5                                      -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Station 4 – Post Live Support | 2026-11-12         -->
 <!-- ============================================================ -->
 
