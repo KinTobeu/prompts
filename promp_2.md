@@ -1,4 +1,33 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: QC didn't edit page + One-cell edit test | 2026-11-12 -->
+<!-- ============================================================ -->
+
+Confirmed: **the inspector only wrote a report. The page wasn't touched.** EoTR and IRR still say NOT FOUND, and the progress line is still duplicated. 📋
+
+That raises a bigger question than the inspector itself: **can Rovo edit an existing page at all?** So far it has *created* pages every time, but never *changed* one. The "Insert into page" button suggests editing may need a human click.
+
+That one answer changes the factory design:
+- **If Rovo can edit:** keep the QC inspector at the end and have it fix the page in place.
+- **If Rovo can't edit:** move the inspector **before** the paint shop. QC checks the station outputs first, and only then is the page created. You can't repaint a car once it's left the factory, so inspect it before it goes out the door. 🏭➡️🚗
+
+---
+
+**Step: the one-cell edit test**
+
+In a new chat, on the draft page:
+> Edit the Confluence page "Release 1.11 – DRAFT (Rovo)". In the Useful Links table, change the EoTR / Test Plan value from "NOT FOUND – please check" to "BTFM-13054". Change nothing else. Save the page.
+
+**Your task:** Tell me which happened:
+- **A)** The page actually changed by itself.
+- **B)** It gave you text or an "Insert into page" button, and you had to click.
+- **C)** It refused, or said it can't edit.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: QC didn't edit page + One-cell edit test       -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Alignment issues + Mould test | 2026-11-12         -->
 <!-- ============================================================ -->
 
