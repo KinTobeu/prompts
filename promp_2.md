@@ -1,4 +1,60 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Station 6 – Release Note | 2026-11-12              -->
+<!-- ============================================================ -->
+
+**Jackpot.** 🎯 The release holds exactly **2 work items, BTFM-11952 and BTFM-13166**, which are *exactly* the 2 features on Joane's 1.11 Release Note. So:
+- ✅ **Fix Version sits on the Features.** That's the link we were missing.
+- ✅ The count is a perfect answer key: 2 in Jira = 2 rows on Joane's page.
+
+**Station 6 is unblocked.** It's also the first station where Rovo **writes** instead of copying. That's the *generative* part of Generative AI: turning a messy Feature description into a clean release note, like a mechanic turning scribbled job notes into a proper service report. 🧾
+
+---
+
+**Station 6: Release Note**
+
+**Create `Agent 06 – Release Note`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: missing PROJECT or VERSION** → ask as bullets and stop.
+> **B: both given** → reply with ONLY the table and the check line.
+>
+> **Step 1: Find the release.** In PROJECT, find the fix version whose name contains `SR<VERSION>` followed by a space (`SR1.1` must NOT match `SR1.11`). **Copy the name exactly from Jira, never retype it.** None or several → reply `FIX_VERSION: NOT_FOUND` or `MULTIPLE: …` and stop.
+>
+> **Step 2: Get the features.** JQL: `project = PROJECT AND fixVersion = "<exact name>"`
+>
+> **Step 3: One row per feature:**
+> | Change (Feature) | Team | Business Description | Technical Description | Customer Impact | Colleague Impact | Changes Live? | Status |
+>
+> **Rules:**
+> - **Change:** `<KEY>: <Summary>` as a Jira link
+> - **Team:** the WorkTeam field, copied exactly
+> - **Business Description:** start with `<KEY> delivers…`, then 2–4 plain-English sentences on the **benefit**, based on the feature description. **Skip anything marked as pulled, removed or struck through.**
+> - **Technical Description:** start with `<KEY> implements…`, then 2–4 sentences summarising the **child items**.
+> - **Customer / Colleague Impact:** your best draft + `(draft – PO to confirm)`
+> - **Changes Live?:** `TBC – PO`
+> - **Status:** Jira status
+> - **Never invent** systems, numbers or dates that aren't in Jira.
+>
+> **Check line:** `Features: N in fix version, N rows in table` (they must match).
+
+**Run it:**
+> Execute "Agent 06 – Release Note" with PROJECT = BTFM, VERSION = 1.11
+
+**Compare with Joane's page:**
+1. 2 rows, 11952 and 13166? ✅/❌
+2. Does 13166 **skip the PO Box item** (it was struck through, "pulled from this release")?
+3. ⚠️ **Team trap:** Joane's page says *"Annuities Team 4"*, but Jira's WorkTeam says *"Annuity Quote and Apply 1"*. Which does Rovo show? That's a **naming mismatch to ask the PO about**, not a Rovo bug.
+
+**Your task:** Answer 1–3, and tell me how close the descriptions read to Joane's.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Station 6 – Release Note                       -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Edit test result (B) + Relay design + Mould test | 2026-11-12 -->
 <!-- ============================================================ -->
 
