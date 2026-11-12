@@ -1,3 +1,50 @@
+**TBC ✅. Station 2 is done.** 🏁
+
+You now have two working parts that bolt together:
+- **Station 1:** VERSION → `BTFM-13034`
+- **Station 2:** `BTFM-13034` → the Useful Links table
+
+---
+
+**Station 3: Tasks + Progress** 📋
+
+You built a rough version of this on day one. Now rebuild it with the proper skeleton.
+
+**Create `Agent 03 – Route to Live Tasks`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: no RELEASE_TICKET** → reply: "I need: • RELEASE_TICKET (e.g. BTFM-13034)"
+> **B: RELEASE_TICKET given** → reply with ONLY the two parts below.
+>
+> **Steps:**
+> 1. Run JQL: `parent = RELEASE_TICKET ORDER BY key DESC`
+> 2. Include **ALL** results. Do not skip, sample or shorten.
+>
+> **Part 1: table**
+> | Key | Summary | Assignee | Status | Planned Start | Planned End |
+> Empty field → leave blank. Never invent dates.
+>
+> **Part 2: progress line, one line only:**
+> `Progress: X Done, Y In Progress, Z Other (Total N)`
+>
+> **Self-check:** Total N must equal the number of rows in the table. If not, write `⚠️ COUNT MISMATCH` instead.
+
+**The self-check is your first mini quality-control loop.** 🔁 Day one's bug was that Rovo only showed 8 of about 30 subtasks. Now it has to count its own work, like a mechanic counting the bolts back into the tray.
+
+**Answer key:** Joane's 1.11 pie showed **Done = 25, In Progress = 1** (as of 3 Nov, so it may have moved since).
+
+> Execute "Agent 03 – Route to Live Tasks" with RELEASE_TICKET = BTFM-13034
+
+**Your task:** Is the Total about 26? Is any key skipped? Does it match the Jira count for `parent = BTFM-13034`?
+
+
+
+
+
+
+
 **6 out of 8 exact, and zero made-up values.** 🎯 That second part matters most.
 
 | Item | Expected | Got | |
