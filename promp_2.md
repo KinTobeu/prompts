@@ -1,4 +1,98 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Alignment issues + Mould test | 2026-11-12         -->
+<!-- ============================================================ -->
+
+Good eye. 👀 Yes, the bodywork doesn't match Joane's car:
+
+| Joane's doc | Rovo's draft |
+|---|---|
+| Headings in **blue banner panels** with ℹ️ and underline | Plain headings |
+| Exact names, e.g. *"List of Components being changed (Version Control):"* | Shortened to *"Components"* |
+| **Side by side:** progress pie on the left, Useful Links on the right | Stacked vertically |
+| All tables the same width | Route to Live table is **wider and shifted left** |
+| Progress shown as a pie chart | A text panel and a line |
+
+**Why:** we told Rovo *what* to put in, but never *what it should look like*. So it designed its own layout, like a factory with no body mould where every car comes out a slightly different shape.
+
+**The fix: use a mould, not a description.** 🏭 Your space already has a template page (I saw **"Release X.X"** in your sidebar). Instead of Rovo building a page from scratch, have it **copy the template and fill in the blanks**. The layout, banners, side-by-side columns and headings then come for free.
+
+---
+
+**Step: test the mould (one small test first)**
+
+Don't change the orchestrator yet. First check whether Rovo can do this at all:
+
+> Copy the Confluence page "Release X.X" as a new page titled "Release 1.11 – MOULD TEST" under "Rovo Agent Test-v0.2".
+> Keep ALL formatting, panels, layouts and headings exactly as they are.
+> Then, in the "Useful Links" table only, fill the Release Ticket row with BTFM-13034. Change nothing else.
+
+**Your task:** Tell me:
+1. Did it create a copy with Joane's layout intact (banners, side-by-side)?
+2. Did it edit **only** that one cell?
+
+If yes, the orchestrator becomes "copy mould → fill each section". If no, plan B is to spell out the exact headings and panel styles. I'll also add an **alignment check** to the QC inspector either way.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Alignment issues + Mould test                  -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
+<!-- RESPONSE: Orchestrator results + Station 7 QC Inspector | 2026-11-12 -->
+<!-- ============================================================ -->
+
+🎉 **Huge milestone: the orchestrator built a full release doc in one go.** Page created, all 9 sections, in the right order. That's the whole factory working without Rovo Studio.
+
+Now the inspection. Compare it with the stations' solo runs:
+
+| Section | Solo run | In the orchestrator | |
+|---|---|---|---|
+| Useful Links: EoTR | BTFM-13054 | **NOT FOUND** | ❌ Regression |
+| Useful Links: IRR | BTFM-13040 | **NOT FOUND** | ❌ Regression |
+| Route to Live: Planned Start | Blank | **2026-11-03** on every row | ❌ Suspicious |
+| Progress | One line | Shown **twice** | 🟡 Cosmetic |
+| Everything else | | Matches | ✅ |
+
+**What happened: the tired driver.** 🚗💤 Solo, each station gets Rovo's full attention. In one long run, Rovo does five jobs in a row, and quality drops: it skips the subtask check (Links) and fills empty columns with the nearest date it saw. **3 Nov is the "Updated" date**, not a planned start. That's an invented value, exactly what the rules forbade.
+
+**This is why the QC loop exists.** A long assembly line *will* drop bolts. You need an inspector at the end.
+
+---
+
+**Next step: Station 7, the QC inspector** 🔍
+
+**Create `Agent 07 – QC Inspector`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: no PAGE or RELEASE_TICKET** → ask for both as bullets and stop.
+> **B: both given** → run the checks and reply with ONLY the QC report.
+>
+> **Checks (re-read Jira for each one; never trust the page):**
+> 1. **Useful Links:** for every `NOT FOUND` row, search the subtasks of RELEASE_TICKET again by summary (EoTR, IRR, SOE, MVD). If found → **FIX**.
+> 2. **Dates:** for each Route-to-Live row, compare Planned Start/End with the Jira fields. If the Jira field is empty but the page has a date → **FIX** (blank it).
+> 3. **Count:** table rows = `parent = RELEASE_TICKET` count = "Total N"? If not → **FAIL**.
+> 4. **No invented data:** Components must still say "TBC – EL to provide".
+> 5. **Duplicates:** the progress line appears only once.
+>
+> **Then:** apply all FIXes to PAGE.
+>
+> **Reply format:**
+> `QC: ✅ PASS` or `QC: ⚠️ FIXED <n>` or `QC: ❌ FAIL`
+> Then one line per check: `1 ✅ / 🔧 fixed: … / ❌ …`
+
+**Run it on your draft:**
+> Execute "Agent 07 – QC Inspector" with PAGE = "Release 1.11 – DRAFT (Rovo)", RELEASE_TICKET = BTFM-13034
+
+**Your task:** Does it catch and fix all 3 problems (EoTR/IRR, the fake dates, the duplicate progress line)? Also, what did the orchestrator's **run log** say? Did it admit anything?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Orchestrator results + Station 7 QC Inspector  -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Orchestrator v1 | 2026-11-12                       -->
 <!-- ============================================================ -->
 
