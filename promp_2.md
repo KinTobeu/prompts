@@ -1,4 +1,41 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Edit test result (B) + Relay design + Mould test | 2026-11-12 -->
+<!-- ============================================================ -->
+
+It's **B.** 🔍 Rovo *can* edit an existing page, but only as a **preview**. A human has to accept it and publish.
+
+That's a handbrake built into the car, not a broken engine. 🅿️ For a release doc it's actually healthy: nothing changes without a person signing it off.
+
+**Two findings from this:**
+1. **Fixes after the page exists need a human click.** So the QC inspector should run **before** the page is built, not after. Inspect the parts before the car leaves the factory.
+2. **Edited values come in as plain text, not Jira links.** Any fix instruction has to say "as a Jira link".
+
+**The v2 design is now clear: a relay race, not one tired driver.** 🏃‍♂️➡️🏃‍♀️
+- **Run 1:** stations 1–5, then QC on their outputs, giving one verified block of data.
+- **Run 2:** build the page from that verified block, using Joane's template as the mould.
+
+I've added these findings to the tracker.
+
+---
+
+**Next step: the mould test** (still needed, because Run 2 depends on it)
+
+In a new chat:
+> Copy the Confluence page "Release X.X" as a new page titled "Release 1.11 – MOULD TEST" under "Rovo Agent Test-v0.2".
+> Keep ALL formatting, panels, layouts and headings exactly as they are.
+> Then, in the "Useful Links" table only, set the Release Ticket row to BTFM-13034 as a Jira link. Change nothing else.
+
+**Your task:** Tell me:
+1. Did the copy keep Joane's layout (blue banners, side-by-side)?
+2. Was only that one cell filled?
+3. Did it publish directly, or come back as a preview?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Edit test result (B) + Relay design + Mould test -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: QC didn't edit page + One-cell edit test | 2026-11-12 -->
 <!-- ============================================================ -->
 
