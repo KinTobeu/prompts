@@ -28,3 +28,46 @@ Give each station **its own page** so you can test and fix it alone, like a part
 | D | 1.1 | Must **not** say 13034. This is the trap. |
 
 **Your task:** Send me a ✅ or ❌ for each test. If A fails, check whether BTFM-13034 actually has the `RetirementReleaseTicket` label.
+
+
+___________________updated________________________
+
+
+
+
+Yes, good thinking. 💡 Right now the seat is fixed for one driver (BTFM). Let's make it **adjustable for any driver**.
+
+**Update `Agent 01` to this:**
+
+> **Purpose:** Find the release ticket for any team.
+>
+> **Inputs needed:**
+> - PROJECT: Jira project key (e.g. BTFM)
+> - VERSION: release version (e.g. 1.11)
+> - LABEL: release ticket label (optional, e.g. RetirementReleaseTicket)
+>
+> **Step 0:** If PROJECT or VERSION is missing, **ask the user for it** and stop. Do not guess.
+>
+> **Step 1:** Run this JQL:
+> `project = PROJECT AND summary ~ "\"Release VERSION\""`
+> If LABEL is given, add: `AND labels = LABEL`
+>
+> **Step 2:** Keep only titles containing "Release VERSION" followed by a space or the end of the title ("1.1" must NOT match "1.11").
+>
+> **Step 3:** Reply with exactly one line:
+> - `RELEASE_TICKET: <KEY>`
+> - `RELEASE_TICKET: NOT_FOUND`
+> - `RELEASE_TICKET: MULTIPLE: <KEY1>, <KEY2>`
+
+**Test drives:**
+
+| Test | Ask Rovo | Expected |
+|---|---|---|
+| A | "…find release ticket for project BTFM, version 1.11, label RetirementReleaseTicket" | `BTFM-13034` |
+| B | "…find release ticket for project BTFM, version 1.2" (no label) | `BTFM-11420` |
+| C | "…find release ticket for version 1.11" (**no project**) | It should **ask you** for the project |
+| D | "…project BTFM, version 1.1" | Must **not** return 13034 |
+
+Test C is the new one. It checks whether Rovo asks or guesses. A good agent stops and asks for the address instead of driving somewhere random.
+
+**Your task:** Send me ✅ or ❌ for A–D.
