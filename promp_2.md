@@ -1,3 +1,78 @@
+Station 1 is done. 🏁 The engine block is in.
+
+**What you learned building it** (these carry over to every station):
+1. **Banner:** "execute, don't summarise"
+2. **Modes:** each output rule says *when* it applies
+3. **Examples:** show a ✅ and a ❌
+4. **No guessing:** exact inputs only, with clear "not found" answers
+
+Use these four as the **skeleton for every agent page** from now on.
+
+---
+
+**Station 2: Links agent** 🔗
+
+**Input:** a release ticket key, which is Station 1's output. That's the first link in your assembly line.
+**Output:** the 8-row Useful Links table.
+
+**Create `Agent 02 – Useful Links` and add:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: no RELEASE_TICKET given** → reply: "I need: • RELEASE_TICKET (e.g. BTFM-13034)"
+> **B: RELEASE_TICKET given** → reply with ONLY the table below.
+>
+> **Steps:**
+> 1. Open RELEASE_TICKET. Read its **description links**.
+> 2. Read its **subtasks**, and match items by summary (e.g. "SOE", "IRR", "EoTR").
+> 3. Fill this table, keeping exactly these 8 rows in this order:
+>
+> | Item | Link |
+> |---|---|
+> | Release Ticket | |
+> | MVD | |
+> | EoTR / Test Plan | |
+> | Solution Record | |
+> | IRR | |
+> | SOE | |
+> | Change Record | |
+> | SI Record | |
+>
+> **Value rules:**
+> - Found → the key or link
+> - Ticket says "Not Required" → `N/A`
+> - Can't find it → `NOT FOUND – please check`
+> - Never invent a key or number.
+
+**Why separate N/A from NOT FOUND?** N/A means "this car has no sunroof." NOT FOUND means "I couldn't see whether it has one." The QC station needs to tell those apart.
+
+**Test against your answer key:**
+> Execute "Agent 02 – Useful Links" with RELEASE_TICKET = BTFM-13034
+
+Compare the result with Joane's 1.11 page: 13034, N/A, 13054, N/A, 13040, 13044, CHG2971779, N/A.
+
+**Your task:** How many of the 8 rows match? ✅/❌ per row.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 add to Step 1:
 Use PROJECT exactly as the user typed it. Never correct or guess a project key.
