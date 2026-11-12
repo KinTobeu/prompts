@@ -1,3 +1,51 @@
+<!-- ============================================================ -->
+<!-- RESPONSE: Station 4 – Post Live Support | 2026-11-12         -->
+<!-- ============================================================ -->
+
+Done. Rejected tasks **stay in for now**. I've started a tracker doc in your **Mater AI** project (`release-agent-tracker.md`) with the station status, this PO question, and the 3 other open checks, so nothing gets lost.
+
+---
+
+**Station 4: Post-live support** 🛠️
+
+A short one: four fields, mostly inferred.
+
+**Create `Agent 04 – Post Live Support`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: no RELEASE_TICKET** → reply: "I need: • RELEASE_TICKET (e.g. BTFM-13034)"
+> **B: RELEASE_TICKET given** → reply with ONLY this table:
+>
+> | Field | Value |
+> |---|---|
+> | Live support required | |
+> | Duration | |
+> | Resource engagement | |
+> | Status | |
+>
+> **Rules:**
+> 1. Look for a subtask of RELEASE_TICKET whose summary contains "Post-Live" or "Early Life Support".
+> 2. **Live support required:** found → `YES (<KEY>)`; not found → `NO`
+> 3. **Duration:** if the ticket or subtask states one, copy it. Otherwise `2 WEEKS (default)`
+> 4. **Resource engagement:** always `TBC – RM to confirm`
+> 5. **Status:** the status of the subtask from rule 1, or blank if none.
+
+**Why the "(default)" tag?** It tells the PO this value is a factory setting, not something Rovo actually found. It's like a car showing "est. range" instead of a real fuel reading.
+
+**Answer key (1.11):** YES · 2 WEEKS · (blank) · (blank).
+Expected from your agent: `YES (BTFM-13063)` · `2 WEEKS (default)` · `TBC – RM to confirm` · `In Progress`
+
+> Execute "Agent 04 – Post Live Support" with RELEASE_TICKET = BTFM-13034
+
+**Your task:** Does it find BTFM-13063, and does it tag the duration as default?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Station 4                                      -->
+<!-- ============================================================ -->
+
+
 **TBC ✅. Station 2 is done.** 🏁
 
 You now have two working parts that bolt together:
