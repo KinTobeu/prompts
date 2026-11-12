@@ -1,3 +1,37 @@
+**6 out of 8 exact, and zero made-up values.** 🎯 That second part matters most.
+
+| Item | Expected | Got | |
+|---|---|---|---|
+| Release Ticket | 13034 | 13034 | ✅ |
+| MVD | N/A | NOT FOUND | 🟡 |
+| EoTR | 13054 | 13054 | ✅ |
+| Solution Record | N/A | NOT FOUND | 🟡 |
+| IRR | 13040 | 13040 (Governance + IRR subtask) | ✅ |
+| SOE | 13044 | 13044 | ✅ |
+| Change Record | CHG2971779 | CHG2971779 | ✅ |
+| SI Record | N/A | N/A | ✅ |
+
+**The two 🟡s are safe misses, not errors.** Rovo said "I don't know" instead of guessing. A mechanic saying "I can't see the part number" is far better than one who makes one up.
+
+- **MVD:** it isn't on the ticket anywhere, so NOT FOUND is honest. Joane filled it in by hand. ✔️ Leave as is.
+- **Solution Record:** remember Station 1's output? The ticket says **"TBC"**. Rovo saw TBC and called it NOT FOUND, which loses information.
+
+**Small fix: add to Value rules:**
+> - If the ticket gives its own value (e.g. "TBC", "Not Required"), **copy it exactly**.
+
+**Your task:** Re-run it. The Solution Record should now say **TBC**.
+
+Once that passes, Station 2 is done and you've got **two parts that bolt together**: Station 1 gives you the key, Station 2 uses it. 🔩
+
+
+
+
+
+
+
+
+
+
 Station 1 is done. 🏁 The engine block is in.
 
 **What you learned building it** (these carry over to every station):
