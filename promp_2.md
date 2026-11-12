@@ -71,3 +71,44 @@ Yes, good thinking. 💡 Right now the seat is fixed for one driver (BTFM). Let'
 Test C is the new one. It checks whether Rovo asks or guesses. A good agent stops and asks for the address instead of driving somewhere random.
 
 **Your task:** Send me ✅ or ❌ for A–D.
+
+
+
+
+
+
+
+
+
+
+@@@@
+
+One line ✅. Station 1 is basically working.
+
+What you've spotted is a classic problem: **rule bleed**. 🩸 You wrote "no bullet points" for the *answer*, but Rovo applied it to *everything*, including the "please give me the project" question.
+
+It's like telling a driver "no honking", and he stops using the indicators too. Rules apply to the whole page unless you say **when** they apply.
+
+**Fix: give it two modes, each with its own rule**
+
+Replace the OUTPUT RULE at the top with:
+
+> 🔴 **OUTPUT RULES: pick ONE mode:**
+>
+> **MODE A: inputs missing** (no PROJECT or no VERSION)
+> Ask for them using this exact format:
+> > I need these inputs:
+> > • PROJECT – Jira project key (e.g. BTFM)
+> > • VERSION – release version (e.g. 1.11)
+> > • LABEL – optional (e.g. RetirementReleaseTicket)
+>
+> **MODE B: all inputs given**
+> Your ENTIRE reply must be ONE line, e.g. `RELEASE_TICKET: BTFM-13034`
+
+Keep the ✅/❌ examples at the bottom. They belong to Mode B.
+
+**Your task:** Run two tests, each in a new chat:
+1. **Test C** (no inputs) → should show the **bulleted question**
+2. **Test A** (all inputs) → should give **one line**
+
+Send me ✅ or ❌ for both. If they pass, run **B** and **D** too and Station 1 is done. 🏁
