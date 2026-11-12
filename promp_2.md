@@ -1,4 +1,45 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Station 6 done + Mould test reminder | 2026-11-13  -->
+<!-- ============================================================ -->
+
+**All three pass.** ✅✅✅
+
+| Check | Result |
+|---|---|
+| "Customer impact" divider + `None in this release` | ✅ |
+| "No customer impact" divider with 13166 and 11952 under it | ✅ |
+| All 4 impact cells end with `(draft – PO to confirm)` | ✅ |
+| Check line: `2 in fix version, 2 rows` | ✅ |
+
+**Station 6 is done.** 🏁 Two small tweaks, two clean fixes, and no new bugs. That's what a well-built station looks like: you turn one bolt and only that bolt moves.
+
+**One optional polish:** the technical descriptions run long. 13166's now lists performance testing, rollback, security assessments and more. Joane's are about 3 tight sentences. If you want them shorter, add this to the Rules:
+> Keep each description under 60 words.
+
+That's taste, not a bug, so your call.
+
+---
+
+**Scoreboard:** all **6 content stations work** individually. 🏭
+
+**The one thing left before Orchestrator v2 is the mould test.** It decides how the final page gets built: fill the release team's blank page, or create a new one.
+
+**Your task:** run this in a new chat:
+> Copy the Confluence page "Release X.X" as a new page titled "Release 1.11 – MOULD TEST" under "Rovo Agent Test-v0.2".
+> Keep ALL formatting, panels, layouts and headings exactly as they are.
+> Then, in the "Useful Links" table only, set the Release Ticket row to BTFM-13034 as a Jira link. Change nothing else.
+
+Then tell me:
+1. Did the layout survive (blue banners, side-by-side)?
+2. Was only that one cell filled?
+3. Was it published directly, or a preview?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Station 6 done + Mould test reminder           -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Agent 06 tweaks (grouping + draft tags) | 2026-11-13 -->
 <!-- ============================================================ -->
 
