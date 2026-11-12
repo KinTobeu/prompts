@@ -1,4 +1,58 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Orchestrator v1 | 2026-11-12                       -->
+<!-- ============================================================ -->
+
+**All 4 sections came out right.** ✅ Section 2 stayed empty, with no invented hashes, and the "PO to confirm" lines are honest. Station 5 is done. I've updated the tracker.
+
+**Five stations are built.** 🏭 Station 6 (Features) is blocked until you find out how features link to a release. So rather than wait, let's do the exciting part now.
+
+---
+
+**Step: Orchestrator v1, the factory manager** 🧑‍🏭
+
+The manager doesn't build anything. It **calls each station in order and passes the key along**, like a pit crew chief shouting "tyres, fuel, go!"
+
+This is also the **biggest limit test yet**: can Rovo chain five instruction pages in one run?
+
+**Create `Release Doc Orchestrator`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: missing PROJECT, VERSION or PARENT_PAGE** → ask for them as a bulleted list and stop.
+> **B: all given** → run the steps below.
+>
+> **Steps:**
+> 1. Execute page "Agent 01 – Release Ticket Finder" with PROJECT, VERSION and LABEL.
+>    If the result is NOT_FOUND, MULTIPLE or PROJECT_NOT_FOUND → **stop** and show that line.
+> 2. Using the RELEASE_TICKET from step 1, execute these pages in order:
+>    - "Agent 02 – Useful Links"
+>    - "Agent 03 – Route to Live Tasks"
+>    - "Agent 04 – Post Live Support"
+>    - "Agent 05 – Placeholders"
+> 3. Create a Confluence page titled `Release VERSION – DRAFT (Rovo)` under PARENT_PAGE, with sections in this order:
+>    1 Release Note → write `Coming soon – Station 6`
+>    2 Components · 3 Dependencies · 4 Route to Live Tasks · 5 Progress · 6 Useful Links · 7 Risks · 8 Incidents · 9 Post-live Support
+> 4. Reply with **only**:
+>    - The page link
+>    - A run log: `Agent 01 ✅/❌ · 02 ✅/❌ · 03 ✅/❌ · 04 ✅/❌ · 05 ✅/❌`
+
+**Why the run log?** It's the dashboard warning lights. 🚨 If a station fails silently, you'll see which one.
+
+**Run it:**
+> Execute "Release Doc Orchestrator" with PROJECT = BTFM, VERSION = 1.11, LABEL = RetirementReleaseTicket, PARENT_PAGE = "Rovo Agent Test-v0.2"
+
+**Your task:** Tell me:
+1. Did it create the page?
+2. What does the run log show?
+3. Did all 9 sections land in the right order?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Orchestrator v1                                -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Station 5 – Placeholders | 2026-11-12              -->
 <!-- ============================================================ -->
 
