@@ -1,4 +1,58 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Agent 06 tweaks (grouping + draft tags) | 2026-11-13 -->
+<!-- ============================================================ -->
+
+Here are the exact edits. Copy and paste them into **Agent 06 – Release Note**.
+
+---
+
+**Tweak 1: Grouping (matches Joane's table)**
+
+**Where:** under Step 3, just after the table header line.
+
+**Add:**
+> **Grouping:** split the table into two groups, using a divider row:
+> 1. First, a row with **"Customer impact"** in the first cell, then every feature whose Customer Impact is NOT "None".
+> 2. Then a row with **"No customer impact"** in the first cell, then every feature whose Customer Impact is "None" or "NA".
+>
+> If a group is empty, keep the divider row and write `None in this release` under it.
+
+**Why:** Joane's page has that divider row. Without it, the PO has to re-sort the table by hand, which brings back the copy-paste work you're trying to remove.
+
+---
+
+**Tweak 2: The draft tag on every impact cell**
+
+**Where:** in Rules, replace the existing Customer / Colleague Impact line.
+
+**Replace:**
+> - **Customer / Colleague Impact:** your best draft + `(draft – PO to confirm)`
+
+**With:**
+> - **Customer / Colleague Impact:** your best draft, **always** ending with `(draft – PO to confirm)`. This applies to EVERY impact cell, including ones that say "None".
+>   - ✅ `None expected; ensures operational stability (draft – PO to confirm)`
+>   - ❌ `None expected; ensures operational stability`
+
+**Why:** in your run, 13166's colleague impact looked like it was missing the tag. An untagged guess looks like a fact, like a used car with no "estimated" sticker on the mileage. The ✅/❌ example stops Rovo skipping it.
+
+---
+
+**Then re-run:**
+> Execute "Agent 06 – Release Note" with PROJECT = BTFM, VERSION = 1.11
+
+**What you should see:**
+- A **"Customer impact"** divider with `None in this release` under it. (Both features are "None" now that PO Box was pulled.)
+- A **"No customer impact"** divider with 11952 and 13166 under it.
+- **All 4 impact cells** ending with `(draft – PO to confirm)`
+
+**Your task:** Tell me ✅/❌ for those three.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Agent 06 tweaks                                -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Station 6 – Release Note | 2026-11-12              -->
 <!-- ============================================================ -->
 
