@@ -1,4 +1,48 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Filler in Edit mode result + Release Note lap | 2026-11-13 -->
+<!-- ============================================================ -->
+
+**Edit mode was the fix.** ✅ Most of the page filled, and Rovo was honest this time: it marked the Release Note ⚠ itself instead of faking a ✅. 🎉
+
+| Section | Result |
+|---|---|
+| Route to Live table | ✅ 30 items, all 1.11 tasks |
+| Pie chart | ✅ Re-pointed (Done 25, In Progress 1, **Rejected 4**) |
+| Useful Links | ✅ Jira links for 13034, 13054, 13040, 13044 and CHG2971779. Solution Record = TBC, SI Record = Not Required (copied from the ticket, as the rule says) |
+| Components | ✅ "TBC – EL to provide" |
+| Dependencies / Risks | ✅ "PO to confirm" lines |
+| Incidents | ✅ "Post-live – complete after go-live" |
+| Post-live | ✅ YES (BTFM-13063) · 2 WEEKS (default) · TBC – RM · In Progress |
+| **Release Note** | ⚠️ **Not done right.** The `[Jira key and feature name]` placeholder row is still there, the dividers are missing, and the wording doesn't follow Agent 06 |
+
+**Two notes:**
+1. **The pie now shows Rejected = 4.** Joane's pie hid those. That's the open PO question again, so I'm leaving it on the list.
+2. **You haven't clicked Update yet.** The editor says "Saved", but that's only the draft. 👀
+
+**Why the Release Note failed:** it's the hardest section, the only one where Rovo has to *write*. Doing it at the end of a long run is the "tired driver" again. So give it its own lap. 🏎️
+
+---
+
+**Next step (same editor, same chat):**
+
+1. Click **Update** first, so the good sections are locked in.
+2. Click **Edit** again, open Ask Rovo, and paste:
+> Fill ONLY the "Release Note" table on this page by executing "Agent 06 – Release Note" with PROJECT = BTFM, VERSION = 1.11.
+> - Delete the `[Jira key and feature name]` placeholder row.
+> - Add the "Customer impact" and "No customer impact" divider rows.
+> - Follow Agent 06's rules exactly ("<KEY> delivers…" / "<KEY> implements…", and the draft tag on impact cells).
+> Change nothing else on the page.
+
+3. Check the table, then click **Update**.
+
+**Your task:** Send me a screenshot of the Release Note table, and confirm the page says **"Updated just now"**. If that passes, you've built a **complete release page** from your agents. 🏁
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Filler in Edit mode result + Release Note lap  -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Orchestrator v2 result + Run B Filler | 2026-11-13 -->
 <!-- ============================================================ -->
 
