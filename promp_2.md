@@ -1,4 +1,65 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Macro test pass + Orchestrator v2 | 2026-11-13     -->
+<!-- ============================================================ -->
+
+**A, a full pass.** 🏁🎉
+
+| Check | Result |
+|---|---|
+| Task table | ✅ **30 items**, all 1.11 tasks (BTFM-13064 → 13053…), in milestone order |
+| Pie chart | ✅ **Done = 25, In Progress = 1**, an exact match for Joane's real 1.11 page |
+| Layout | ✅ Banners and side-by-side layout kept |
+
+**Why it matters:** the "wired to the old car" problem is **solved**. Rovo can re-point the live windows, so **every section of the page can now be filled by the agent**. 🔌
+
+**Bonus, it answers the old PO question:** the table shows **30** tasks but the pie shows only **26**. The pie's settings leave out the 4 "other" ones (like the Rejected BTFM-13035). That's *why* Joane's pie said 25 + 1. Mystery solved. 🕵️
+
+---
+
+**Where you are:**
+- ✅ 6 stations (the agents) work
+- ✅ Clean mould (the template) with layout kept
+- ✅ Rovo can copy the mould, edit text and re-point macros
+
+**Next step: Orchestrator v2, the factory manager that uses the mould** 🧑‍🏭
+
+**Create `Release Doc Orchestrator v2`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: missing PROJECT, VERSION or PARENT_PAGE** → ask as bullets and stop.
+> **B: all given** → run the steps below.
+>
+> **Step 1: Engine block.** Execute "Agent 01 – Release Ticket Finder" with PROJECT, VERSION, LABEL. Not found → stop and show that line.
+>
+> **Step 2: Mould.** Copy page "Release Template v1.0" as `Release VERSION – DRAFT (Rovo)` under PARENT_PAGE.
+>
+> **Step 3: Fill the copy.** Change ONLY the `[placeholders]` and the Jira filters. Keep every banner, heading, layout and column.
+> - **Route to Live table + pie chart:** JQL = `parent = RELEASE_TICKET ORDER BY cf[10317]`
+> - **Release Note:** rows from "Agent 06 – Release Note"
+> - **Useful Links:** values from "Agent 02 – Useful Links", as Jira links
+> - **Post live support:** values from "Agent 04 – Post Live Support"
+> - **Components / Dependencies / Risks / Incidents:** rules from "Agent 05 – Placeholders"
+>
+> **Step 4: Reply with ONLY:**
+> - The page link
+> - Run log: `01 ✅/❌ · copy ✅/❌ · 06 ✅/❌ · 02 ✅/❌ · 04 ✅/❌ · 05 ✅/❌ · macros ✅/❌`
+> - `Remaining placeholders:` a list of any `[...]` still on the page
+
+**Run it:**
+> Execute "Release Doc Orchestrator v2" with PROJECT = BTFM, VERSION = 1.11, LABEL = RetirementReleaseTicket, PARENT_PAGE = "Rovo Agent Test-v0.2"
+
+Expect **one approval** for the copy and **one Update click** for the fill.
+
+**Your task:** Send me the run log and 3–4 screenshots of the draft page. If Rovo gets "tired" partway (sections skipped), that's fine. We'll then split it into a relay of two runs.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Macro test pass + Orchestrator v2              -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Template v1.0 validation + macro re-point test | 2026-11-13 -->
 <!-- ============================================================ -->
 
