@@ -1,4 +1,47 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Full release page milestone + Jira-wording rule | 2026-11-13 -->
+<!-- ============================================================ -->
+
+🏁 **You've built a full release page with your agents.** The page says **"Updated just now"**, all 9 sections are filled, and Joane's layout is intact. You did it without Rovo Studio, which is exactly what you set out to prove.
+
+**Release Note check:**
+
+| Check | Result |
+|---|---|
+| "Customer impact" divider + *None in this release* | ✅ |
+| "No customer impact" divider + 13166 and 11952 | ✅ |
+| House style ("delivers…" / "implements…") | ✅ |
+| 13166 technical description | ✅ Now uses Jira wording (Node.js upgrade, Pega Experience API) |
+| 11952 "INT/PRE/PROD" made-up phrase | ✅ Gone |
+| 13166 **colleague impact** | ❌ Still says *"resolves **requote issues**"* (the made-up phrase) and is missing the *(draft – PO to confirm)* tag |
+
+One bolt is still loose. 🔩 Fix it **by hand** in Edit mode, which takes about 10 seconds. A human final check is part of the design anyway.
+
+---
+
+**What you proved in 3 days** (I've saved this to the tracker in your project):
+- Confluence pages **can act as agents** (instruction pages)
+- An **orchestrator** can chain them, as long as runs are split into a relay
+- Rovo can **fill a mould** and **re-point live Jira tables**
+- The **QC loop** works when you demand evidence. Rovo even flagged its own made-up phrases.
+
+---
+
+**Next step: prevent the made-up phrases at the source**
+
+Add this rule to **Agent 06 – Release Note**:
+> **Jira wording only:** every description must use facts found in the feature's description or its child items in Jira. Do not reuse wording from earlier runs. If you can't find a fact, write less, never more.
+
+**Your task:** Fix the leftover phrase, add the rule, then pick one:
+- **A)** Run the full relay on **Release 2.3** (the second answer key) to see whether it works on a different release
+- **B)** Draft a short update for **Joane** showing what's working
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Full release page milestone + Jira-wording rule -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Filler in Edit mode result + Release Note lap | 2026-11-13 -->
 <!-- ============================================================ -->
 
