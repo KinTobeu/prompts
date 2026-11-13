@@ -1,4 +1,55 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Test drive on Release 2.3 | 2026-11-13             -->
+<!-- ============================================================ -->
+
+Go with **A: a test drive on a new road.** 🛣️ A car that only works on one road isn't proven yet. Test it on **Release 2.3** before you show Joane, so your update says "it works on any release," not just "it worked once."
+
+**Why 2.3 is a good test:** it's harder.
+- About **5 features** instead of 2 (more writing, so a "tired driver" risk)
+- Real values in **MVD, Solution Record and SI Record** (1.11 had TBC or N/A)
+- A different release ticket and fix version
+
+**Answer key** (from the old Release X.X page, which was the 2.3 page):
+
+| Item | Expected |
+|---|---|
+| Release ticket | BTFM-12475 |
+| EoTR / IRR / SOE | 12495 / 12481 / 12485 |
+| Change record | CHG2960711 |
+| SI record | SIW0017734 |
+| Solution record | SLN0017103 + SLN0013087 |
+| Features | 11088, 9206, 1391, 12103, 12166 |
+
+---
+
+**Run the same relay:**
+
+1. **Run A:** in Rovo chat:
+> Execute "Release Doc Orchestrator v2" with PROJECT = BTFM, VERSION = 2.3, LABEL = RetirementReleaseTicket, PARENT_PAGE = "Rovo Agent Test-v0.2"
+
+   Approve the copy.
+2. **Run B:** open **Release 2.3 – DRAFT (Rovo)**, click **Edit**, open Ask Rovo:
+> Execute "Release Doc Filler" with PAGE = this page, PROJECT = BTFM, VERSION = 2.3, RELEASE_TICKET = <ticket from Run A>
+
+   Check the page, then click **Update**.
+3. **Release Note lap:** click **Edit** again, then run Agent 06 for VERSION = 2.3. Check the rows, then click **Update**.
+
+**Watch for these traps:**
+- Does Agent 01 find **BTFM-12475**? If the label is different for 2.3, try it without the label.
+- Does "SR2.3" accidentally match "SR2.3.1"? (Remember the SOE task was "Release 2.3.1".)
+
+**Your task:** Fill in this scorecard:
+- Release ticket ✅/❌
+- Useful Links __/8 correct
+- Features __/5 found
+- Any made-up phrases? Y/N
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Test drive on Release 2.3                      -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Customer impact divider - match Joane's format | 2026-11-13 -->
 <!-- ============================================================ -->
 
