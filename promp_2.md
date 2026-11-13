@@ -1,4 +1,61 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Orchestrator v2 result + Run B Filler | 2026-11-13 -->
+<!-- ============================================================ -->
+
+It's half done, and that tells us exactly where Rovo stops. 🔍
+
+| Step | Result |
+|---|---|
+| 1. Find release ticket | ✅ (no error) |
+| 2. Copy the mould | ✅ `Release 1.11 – DRAFT (Rovo)` created, layout kept |
+| 3. Fill | ❌ **Didn't happen.** Every `[placeholder]` is still there, Useful Links shows 8 × `[TBC]`, and the table and pie still show **R2.3** (BTFM-12500…, 31 items, In Progress = 9) |
+| 4. Run log | ❌ None |
+
+**Why:** the copy needed your **approval click**, and once Rovo asks for approval, **its turn ends**. That's the same thing that happened in the mould test (it copied, then stopped).
+
+Think of the approval as a **pit stop**: the driver gets out, and nobody gets back in to finish the race. 🏎️🛑
+
+**That's fine, because it gives us the natural relay split:**
+- **Run A:** find the ticket and copy the mould ✅ (you've just done this)
+- **Run B:** fill the draft (next)
+
+---
+
+**Next step: build Run B, the filler** 🔧
+
+**Create `Release Doc Filler`:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: missing PAGE, PROJECT, VERSION or RELEASE_TICKET** → ask as bullets and stop.
+> **B: all given** → edit PAGE as below, in ONE edit.
+>
+> **Rules:** change ONLY `[placeholders]` and Jira filters. Keep every banner, heading, layout and column.
+>
+> 1. **Route to Live table AND pie chart:** set both to JQL `parent = RELEASE_TICKET ORDER BY cf[10317]`
+> 2. **Useful Links:** fill from "Agent 02 – Useful Links", as Jira links
+> 3. **Release Note:** rows from "Agent 06 – Release Note" (one row per feature)
+> 4. **Post live support:** values from "Agent 04 – Post Live Support"
+> 5. **Components / Dependencies / Risks / Incidents:** rules from "Agent 05 – Placeholders"
+>
+> **Reply with ONLY:**
+> - Run log: `macros ✅/❌ · links ✅/❌ · release note ✅/❌ · post-live ✅/❌ · placeholders ✅/❌`
+> - `Remaining placeholders:` list any `[...]` left
+
+**Run it:** open the **Release 1.11 – DRAFT (Rovo)** page, click **Ask Rovo**, and paste:
+> Execute "Release Doc Filler" with PAGE = this page, PROJECT = BTFM, VERSION = 1.11, RELEASE_TICKET = BTFM-13034
+
+Then click **Update** to publish.
+
+**Your task:** Send me the run log and screenshots. If it fills only some sections ("tired driver"), tell me which ones, and we'll split Run B into smaller laps.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Orchestrator v2 result + Run B Filler          -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Macro test pass + Orchestrator v2 | 2026-11-13     -->
 <!-- ============================================================ -->
 
