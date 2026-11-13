@@ -1,4 +1,25 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: PO questions | 2026-11-13                          -->
+<!-- ============================================================ -->
+
+1. Should Rejected subtasks appear in the Route to Live table and pie chart, or should they be hidden?
+2. Jira shows team names like "Annuity Quote and Apply 1", but the release page uses "Annuities Team 4". Is there a mapping we should follow, or can we use the Jira names?
+3. Is 2 weeks the standard default for post-live support?
+4. Where does the answer to "Changes live upon release?" come from? Is it a Jira field, or always the PO's decision?
+5. Where is the MVD stored? It isn't linked on the release ticket.
+6. Are dependencies and risks tracked in Jira (as linked issues or a Risk issue type), or only discussed in meetings?
+7. (EL) Are commits or PRs linked to Jira features, so we can pull component names and versions automatically?
+8. Can teams follow a standard Feature description template (business description, technical description, customer/colleague impact, MVD link, components)?
+9. Is there a standard naming convention for fix versions? 1.11 uses "SR1.11" and 2.3 uses "R2.3".
+10. (RM) When a release ticket lists several SI or Solution Records (e.g. "R2.3 -" and "CA -"), should the release page show all of them with their labels?
+11. Can you confirm the Release Note layout: features with customer impact first, then a single "No customer impact" divider, then the rest?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: PO questions                                   -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Test drive on Release 2.3 | 2026-11-13             -->
 <!-- ============================================================ -->
 
