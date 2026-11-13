@@ -1,4 +1,51 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Template v1.0 validation + macro re-point test | 2026-11-13 -->
+<!-- ============================================================ -->
+
+This is a big improvement: **about 90% of a clean mould.** 🏭
+
+**✅ Passes**
+- Blue banner headings with ℹ️, underline and colon, all kept
+- **Pie chart and Useful Links side by side**, layout kept
+- Release Note, Components and Dependencies all have clean `[placeholders]`
+- Useful Links shows 8 × `[TBC]`
+- Risks, Incidents and Post-live are there, with `[YES/NO]` and `[Duration]`
+
+**❌ One real problem: two parts are still wired to the old car** 🔌
+
+| Part | What it shows | Why |
+|---|---|---|
+| Route to Live table | BTFM-13887 *"SOE creation (Release 2.3.1)"*, 12505… | It's a **live Jira window**, still pointed at the **R2.3 release ticket** |
+| Pie chart | In Progress 9, Done 7, Identified 10… | Same live window, so it's also R2.3 data |
+
+Because these are live windows, they'll **always show R2.3** until someone re-points them. A new release page made from this mould would quietly show the wrong release's tasks. 😬
+
+**🟡 Small polish (optional)**
+- Post-live: add `[TBC]` to **Resource engagement** and **Status** (they're blank right now).
+- Release Note row: the placeholders are in **code font** (`[Team]`). Switch them to normal text so they match the other rows.
+
+---
+
+**Next step: find out whether Rovo can re-point a live window** 🔧
+
+This decides whether the agent can handle the macros or whether a human swaps one filter per release.
+
+On a **copy** of the template (never the template itself), ask Rovo:
+> On page "<your copy name>", change the Jira issues table in "Release Route To Live Tasks and Dates" and the pie chart in "Route to Live Progress" to use the JQL: `parent = BTFM-13034`. Change nothing else.
+
+**Your task:** Tell me which happened:
+- **A)** Both now show 1.11 tasks (30 items).
+- **B)** It came back as a preview, or only one of them changed.
+- **C)** It couldn't edit the macros.
+
+If it's **C**, the fix is easy: put a note in the template saying *"Update the Jira filter to the release ticket"*. That's one 10-second human step, and the agent does everything else.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Template v1.0 validation + macro re-point test -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Make a clean template from Release X.X | 2026-11-13 -->
 <!-- ============================================================ -->
 
