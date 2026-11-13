@@ -1,4 +1,42 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Customer impact divider - match Joane's format | 2026-11-13 -->
+<!-- ============================================================ -->
+
+It isn't Rovo's mistake. Rovo followed the **grouping rule I gave you** in the Agent 06 tweaks. But you're right to question it, because **it doesn't match Joane's page.** 👀
+
+**What Joane's real 1.11 page does:**
+- Features **with** customer impact go at the top, with **no heading**
+- Then **one** divider row: **"No customer impact"**
+- Then the features with no impact
+
+**What my rule added:**
+- An extra **"Customer impact"** heading row
+- An extra **"None in this release"** row
+
+So the two rows at the top are **extra parts that aren't in the original car design**. 🚗 They're harmless, but they're not Joane's style, and the point is to match her format.
+
+Good catch: you just did the QC job yourself, comparing the output against the answer key. That's exactly the habit this project needs. ✅
+
+---
+
+**Fix: replace the Grouping rule in Agent 06 with:**
+
+> **Grouping (match Joane's format):**
+> 1. First, list features whose Customer Impact is NOT "None", with **no heading row**.
+> 2. Then add **one** divider row with **"No customer impact"** in the first cell.
+> 3. Then list features whose Customer Impact is "None" or "NA".
+> 4. If no feature has customer impact, start directly with the "No customer impact" divider.
+
+**For this page:** in Edit mode, delete the **"Customer impact"** and **"None in this release"** rows by hand, then click **Update**.
+
+**Your task:** Make the fix, then tell me **A** (run the relay on Release 2.3) or **B** (draft the update for Joane).
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Customer impact divider - match Joane's format -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Full release page milestone + Jira-wording rule | 2026-11-13 -->
 <!-- ============================================================ -->
 
