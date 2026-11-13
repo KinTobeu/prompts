@@ -1,4 +1,50 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Make a clean template from Release X.X | 2026-11-13 -->
+<!-- ============================================================ -->
+
+No problem, here's the simple version. 🔧
+
+**Goal:** you have two pages, and each is half right.
+- **Release X.X** has the **right layout** (blue banners, side-by-side) but **old R2.3 data** inside.
+- **Release Notes Template** has **clean placeholders** but the **wrong layout**.
+
+So: **copy Release X.X, then delete its old data by hand.** Same car body, empty seats. 🚗
+
+---
+
+**Step 1: Make a copy**
+1. On **Release X.X**, click **⋯** (top right, next to Share).
+2. Click **Copy**.
+3. Name it **`Release Template – CLEAN`** and save it under "Rovo Agent Test-v0.2".
+
+**Step 2: Clean it** (in the copy only, never the original)
+Click **Edit**, then for each section:
+
+| Section | What to do |
+|---|---|
+| Release Note table | Keep the header row. Delete all feature rows except **one**. In that row, type `[Jira key and feature name]`, `[Team]`, `[Business summary]` and so on. |
+| Components table | Keep the header. Leave **one** row: `[Component]`, `[Team]`, `[Repo]`, `[New version]`, `[Previous version]`, `[Comments]` |
+| Key Dependencies | Keep the header and **one** empty row |
+| Route to Live (Jira table) | **Don't touch it** for now |
+| Pie chart | **Don't touch it** |
+| Useful Links | Keep the 8 item names. Replace every link with `[TBC]` |
+| Risks / Incidents | Already empty, leave them |
+| Post-live support | Replace YES and 2 weeks with `[YES/NO]` and `[Duration]` |
+
+**Don't delete any blue banner, heading or layout box. Only change the text inside the tables.**
+
+**Step 3: Publish**, then scroll top to bottom and check: are there any old keys left (BTFM-11088, 12475, CHG2960711)? There should be none.
+
+---
+
+**Your task:** When it's done, send me 2–3 screenshots of the clean template and I'll validate it. ✅
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Make a clean template from Release X.X         -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Station 6 done + Mould test reminder | 2026-11-13  -->
 <!-- ============================================================ -->
 
