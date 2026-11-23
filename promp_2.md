@@ -1,4 +1,52 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Demo plan (35 min, live + hands-on) | 2026-11-23   -->
+<!-- ============================================================ -->
+
+Since these three people will **use** it, don't run a show. Run a **driving lesson**: you drive the first lap, then hand them the keys. 🚗🔑
+
+**Demo plan (35 min)**
+
+| Time | Lap | What happens |
+|---|---|---|
+| 0–3 | **The problem** | Joane's email: copy-paste work that goes stale |
+| 3–8 | **How it works** | The factory: agent pages are the **stations**, the orchestrator is the **manager**, the template is the **mould**, and the human is the **final inspector** |
+| 8–18 | **You drive** | Live run on 1.11 (3 laps, below) |
+| 18–28 | **They drive** | One of them runs it again on their own laptop, with you guiding |
+| 28–32 | **Compare** | Side by side with Joane's real 1.11 page. Punchline: Rovo left out the pulled PO Box item, so it's more up to date |
+| 32–35 | **Limits + asks** | What still needs a human, the 2.3 naming gap, PO questions, next steps |
+
+**The 3 laps (give these prompts out as a cheat sheet):**
+1. **Build the car:** in Rovo chat:
+   *Execute "Release Doc Orchestrator v2" with PROJECT = BTFM, VERSION = 1.11, LABEL = RetirementReleaseTicket, PARENT_PAGE = "…"*
+   Then click **Approve**.
+2. **Fill it:** open the draft, **click Edit** ⚠️, open Ask Rovo, and run:
+   *Execute "Release Doc Filler" with PAGE = this page, PROJECT = BTFM, VERSION = 1.11, RELEASE_TICKET = BTFM-13034*
+   Check it, then click **Update**.
+3. **Release Note lap:** **Edit** again → run Agent 06 → *"Rewrite using only Jira wording"* → **Update**.
+
+**Gotchas to teach them (write these on a slide):**
+- Rovo only changes the page in **Edit mode**
+- After any approval, Rovo **stops**, so start the next lap yourself
+- Rovo's ✅ isn't proof. The proof is **"Updated just now"** on the page.
+- Every **TBC** and **(draft – PO to confirm)** cell needs a human check
+
+---
+
+**🚨 Blocker to fix before the demo:** all your agent pages are in your **personal space** and marked **"Limited"**. Joane's team **can't see them**, so their lap will fail. 😬 Move the pages (or copy them) into a **shared team space**, and give the three of them access.
+
+**Step 2 (your task):**
+1. Move or share the agent pages, the template and the orchestrator with the three attendees.
+2. Do a **full dry run** using a fresh page name (e.g. "Release 1.11 – DEMO"), then delete the old drafts so Rovo doesn't pick up the wrong page.
+3. Keep a finished 1.11 page open in a tab as your **spare tyre**.
+
+Tell me when that's done, and I'll help with lap 2 of the prep: the "How it works" explanation, with a simple diagram.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Demo plan                                      -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Where to add "Ask when ambiguous" in Agent 02 | 2026-11-23 -->
 <!-- ============================================================ -->
 
