@@ -1,4 +1,46 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Where to add "Ask when ambiguous" in Agent 02 | 2026-11-23 -->
+<!-- ============================================================ -->
+
+Put it in **two places**. It's like adding a new warning light: it needs a spot on the dashboard (MODES) and a rule for when it switches on (Value rules). 🚗
+
+**Here's how Agent 02 should look. The two new parts are marked 🆕:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> 🔴 **MODES**
+> **A: no RELEASE_TICKET given** → reply: "I need: • RELEASE_TICKET (e.g. BTFM-13034)"
+> **B: RELEASE_TICKET given** → reply with ONLY the table below.
+> 🆕 **C: an item has more than one value** → don't fill the table yet. Ask the question from the "Ask when ambiguous" rule, wait for the answer, then go to Mode B.
+>
+> **Steps:**
+> 1. Open RELEASE_TICKET. Read its description links.
+> 2. Read its subtasks, matching items by summary (SOE, IRR, EoTR).
+> 3. Fill the 8-row table.
+>
+> **Value rules:**
+> - Found → the key or link
+> - Ticket says "Not Required" → `N/A`
+> - Ticket gives its own value (e.g. "TBC") → copy it exactly
+> - Can't find it → `NOT FOUND – please check`
+> - Ignore sub-versions (e.g. "2.3.1" when VERSION = 2.3)
+> - Keep the ticket's labels (e.g. "R2.3 -", "CA -") and show every key as a link
+> - Never invent a key or number
+> - 🆕 **Ask when ambiguous:** if an item has more than one value, list them with their labels and ask: *"BTFM-XXXX lists several SI Records: [list]. Show all with labels, or only one?"*
+
+**Why two places?** MODES tells Rovo **when** to stop and ask. The rule tells it **what** to ask. Without the MODE, Rovo might ask the question *and* fill the table in the same reply, like a driver who asks "which exit?" while already taking one. 😅
+
+**Your task:** Run it in a new chat:
+> Execute "Agent 02 – Useful Links" with RELEASE_TICKET = BTFM-12475
+
+Does it **stop and ask** about the SI Records, or does it fill the table straight away?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Where to add "Ask when ambiguous" in Agent 02  -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Ask for clarification at runtime (SI/Solution records) | 2026-11-17 -->
 <!-- ============================================================ -->
 
