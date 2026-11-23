@@ -1,4 +1,60 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Copilot PPT prompt for demo | 2026-11-23           -->
+<!-- ============================================================ -->
+
+Here's the prompt filled in for your demo. Copy everything in the box into Copilot:
+
+```
+Create a modern, trendy presentation on "Release Doc Assistant – building AI agents in Confluence with Rovo (no Rovo Studio needed)" for the Release Management team (3 people who will use this tool every release).
+
+Length: 12 slides.
+Goal: teach + persuade (show it works, then teach them to run it themselves).
+
+Structure:
+1. Title slide – "Release Doc Assistant" with tagline: "From copy-paste to one-click release pages"
+2. Agenda – The problem · The idea · How it works · Live demo · Results · Your turn · Next steps
+3. The problem – Release pages are manual copy-paste from Jira · Text goes stale · Same work every release
+4. The idea – No Rovo Studio? Turn Confluence pages into agents · Each page = one instruction set · Rovo follows them
+5. How it works (factory analogy, bento-grid of 4 boxes):
+   - Stations = Agent pages (each fills one section)
+   - Manager = Orchestrator (runs stations in order)
+   - Mould = Release template (keeps the layout)
+   - Inspector = You (final human check)
+6. The 3 laps (numbered steps):
+   1. Build – Orchestrator copies the template
+   2. Fill – Filler completes the page (in Edit mode)
+   3. Release Note – Agent 06 writes feature summaries
+7. Live demo – placeholder slide titled "Let's drive" (leave space for screenshots)
+8. Results – All 9 sections filled · Layout kept · More up to date than the manual page (pulled items left out)
+9. Gotchas – Use Edit mode · Rovo stops after approvals · Proof = "Updated just now" · Check every TBC / draft cell
+10. Limits & next steps – Human review still needed · Naming differs between releases · Proposal: standard Feature description template
+11. Key takeaways – Saves repetitive work · Data comes live from Jira · Humans stay in control
+12. Thank you / Q&A – "Your turn to drive"
+
+Design style:
+- Minimalist, dark theme with soft gradient backgrounds
+- Large bold headlines, clean sans-serif font
+- Bento-grid style layouts with rounded boxes where useful (especially slides 5, 6, 9)
+- Use simple line icons (gear, document, checklist, car, factory); no clip art
+- Consistent 3-colour palette: deep navy, electric blue, white
+
+Tone: friendly and professional, with simple language and no jargon.
+Add speaker notes for each slide (2–4 sentences, conversational, using the car/factory analogy where helpful).
+```
+
+**Three tips:**
+- **Add the screenshots yourself** to slides 7 and 8: the filled 1.11 page and the side-by-side comparison. Copilot can't see your Confluence pages.
+- **Check every fact** in the speaker notes. Copilot can make things up too, the same way Rovo invented "requote issues". 😉
+- On slide 10, include **2–3 of your PO questions** to show you've thought ahead.
+
+Send me the slides when they're ready and I'll review them before the demo.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Copilot PPT prompt for demo                    -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Demo plan (35 min, live + hands-on) | 2026-11-23   -->
 <!-- ============================================================ -->
 
