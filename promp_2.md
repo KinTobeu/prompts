@@ -1,4 +1,34 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Ask for clarification at runtime (SI/Solution records) | 2026-11-17 -->
+<!-- ============================================================ -->
+
+Yes, the agent can ask, and that's a good idea. 👍 You already built that pattern in Station 1, where the agent asks for PROJECT and VERSION when they're missing. The same idea works here: **when the agent hits a fork, it stops and asks.**
+
+**The catch:** it shouldn't ask *every* run, only when there's a real fork. A good sat-nav asks "which exit?" at a junction, not on every straight road. 🗺️
+
+**Add this to Agent 02 – Useful Links:**
+> **Ask when ambiguous:** if the release ticket lists more than one value for an item (e.g. "R2.3 - SIW…" and "CA - SIW…"), do NOT pick one. Stop and ask:
+> "BTFM-XXXX lists several SI Records: [list them with their labels]. Show all with labels, or only one?"
+> Then fill the table using the answer.
+
+**Trade-off:**
+- **Asking at runtime** means the agent always gets it right, but someone has to be there to answer every time it happens.
+- **Asking the PO once** means you write the answer into the rule and the agent never has to ask again.
+
+The best approach is **both**: the agent asks when it isn't sure, and whatever the PO decides becomes a permanent rule. That's how the agent learns over time. 🔧
+
+**Your task:** Add the rule, then re-run Agent 02 for 2.3 (BTFM-12475). Does it stop and ask about the two SI records?
+
+Also, Agent 06 still needs its re-run for 2.3, with the new "read the Fix Version from the ticket" step.
+
+I took "send" to mean you've sent the questions to the PO. If you meant me to email them, give me the PO's email address and I'll draft it.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Ask for clarification at runtime               -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: PO questions | 2026-11-13                          -->
 <!-- ============================================================ -->
 
