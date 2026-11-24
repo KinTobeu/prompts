@@ -1,4 +1,37 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Nudge Rovo's clarifying-question card | 2026-11-24 -->
+<!-- ============================================================ -->
+
+You're right, I'd missed that. 👀 What you've seen is Rovo's **own built-in "clarifying question" card**: a few options to pick from, plus a box at the end to type something else. That's very close to what you want.
+
+**The catch:** **Rovo decides by itself** when to show that card. Usually it appears when *it* thinks your request is unclear. I haven't seen any official way for an instruction page to switch it on. But we can try to **nudge** it, which is a good limit test. 🔬
+
+**Add this to Mode A:**
+> **Ask as a clarifying question:** for each missing input, ask it as a **clarifying question with options**: list 2–3 likely choices, and let the user type a different answer. Example for Q2:
+> "Which release version?
+> • 1.11
+> • 2.3
+> • 2.4
+> • Other (type it)"
+
+**Test it** in a new chat:
+> Execute Release Doc Orchestrator v2
+
+**Three possible results:**
+- **A)** The **card with options and an input box** appears 🎉
+- **B)** Plain text with bullet options (still usable: you type the answer)
+- **C)** Nothing changes
+
+**Your task:**
+1. Tell me A, B or C.
+2. **Bonus clue:** do you remember **what you asked** the time the card appeared? Send a screenshot of it if you can. If we know what triggers the card, we can copy that wording into the instruction page. 🔍
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Nudge Rovo's clarifying-question card          -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Interactive Orchestrator v2 (asks for inputs) | 2026-11-24 -->
 <!-- ============================================================ -->
 
