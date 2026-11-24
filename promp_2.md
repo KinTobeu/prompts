@@ -1,4 +1,45 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Card vs list + hard stop rules | 2026-11-24        -->
+<!-- ============================================================ -->
+
+🎉 **The card appeared!** You got the exact UI you wanted: a 4-step wizard (1/4 → 4/4) with clickable options, a **"Tell Rovo what to do"** box, and Skip/Confirm buttons.
+
+**Why it's a card sometimes and a list other times:** Rovo is **generative**, so the same request can come back in a different shape. It's like ordering at the same drive-thru twice: same burger, but sometimes it's in a box and sometimes in a wrapper. 🍔 **You can nudge it, but you can't force the card every time.**
+
+---
+
+**🚨 More important: in the card run, Rovo jumped ahead.** Look at the bottom of your screenshot. Before you confirmed anything, it **drafted a page called "BTFM Release 1.11"**:
+- ❌ Wrong title
+- ❌ **Built from scratch, not from the template**, so the layout and placeholders are missing
+- ❌ It skipped the **"Ready to build?"** confirmation step
+
+Rovo flagged it honestly itself, and the page is only a **preview**. 👉 **Don't publish it. Discard it.**
+
+**Fix: add a hard stop at the top of the orchestrator, under the banner:**
+> 🛑 **HARD RULES:**
+> 1. Never create or draft any page until the user replies **yes** to "Ready to build".
+> 2. Never build a page from scratch. **Only copy "Release Template v1.0".**
+> 3. If the copy fails, stop and report the error. Don't improvise a different way.
+
+---
+
+**For the demo, plan for both versions:**
+- **The reliable route (use this live):** give all inputs in **one line**, so the skip rule kicks in and no questions are asked.
+- **The bonus (show it if it appears):** *"For new users, Rovo can ask step by step. Sometimes as a card, sometimes as a list. Both work."*
+
+That way the demo works whichever version Rovo shows. 🛞
+
+**Your task:** Add the hard rules, discard the wrong draft, then run the one-line command:
+> Execute Release Doc Orchestrator v2 with PROJECT = BTFM, VERSION = 1.11, LABEL = RetirementReleaseTicket, PARENT_PAGE = <Release Demo link>
+
+Does it show **"Ready to build"** and wait for **yes** before creating anything?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Card vs list + hard stop rules                 -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Nudge Rovo's clarifying-question card | 2026-11-24 -->
 <!-- ============================================================ -->
 
