@@ -1,4 +1,46 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Dry run – pre-flight + Lap 1 | 2026-11-24          -->
+<!-- ============================================================ -->
+
+Good, let's do the dry run exactly like the real thing: **one lap at a time, with a stopwatch.** ⏱️🏁
+
+---
+
+**Pre-flight checks (5 min, before you start the clock)**
+
+1. **🛞 Save the spare tyre:** rename your finished page to **"Release 1.11 – SPARE (Rovo)"**.
+   ⚠️ This matters because Confluence won't allow two pages with the same title in one space. If "Release 1.11 – DRAFT (Rovo)" still exists, Lap 1 will fail.
+2. **🏠 Garage:** create an empty page called **"Release Demo"** in the shared space. It will be the PARENT_PAGE.
+3. **🔑 Access:** send one agent page link to one of the attendees and ask, "Can you open this?" If they can't, the hands-on part will fail on the day.
+4. **🧹 Fresh chat:** open a **new** Rovo chat, so there's no memory from earlier runs.
+
+---
+
+**Lap 1: build the car** (start the stopwatch ⏱️)
+
+In Rovo chat, paste:
+> Execute "Release Doc Orchestrator v2" with PROJECT = BTFM, VERSION = 1.11, LABEL = RetirementReleaseTicket, PARENT_PAGE = "Release Demo"
+
+Then click **Approve**.
+
+**Pass criteria:**
+- ✅ "Release 1.11 – DRAFT (Rovo)" appears **under Release Demo**
+- ✅ Blue banners and the side-by-side layout are intact
+- ✅ The page still has `[placeholders]` (that's expected, because Lap 2 fills them)
+
+**Your task:** Tell me:
+1. Did all 4 pre-flight checks pass?
+2. Did Lap 1 pass?
+3. ⏱️ How long did it take?
+
+Then we'll do Lap 2.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Dry run – pre-flight + Lap 1                   -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Copilot PPT prompt for demo | 2026-11-23           -->
 <!-- ============================================================ -->
 
