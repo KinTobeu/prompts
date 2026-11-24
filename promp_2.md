@@ -1,4 +1,53 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Ask using the question card (Mode A) | 2026-11-24  -->
+<!-- ============================================================ -->
+
+Let's push the odds towards the card as far as we can. 🎯 I can't guarantee it every time, but **wording that matches how Rovo's question card works** should make it appear much more often.
+
+**What we learned from your screenshots:**
+- The card shows **up to 4 questions** (1/4 → 4/4)
+- Each question has **up to 3 options**, plus a **"Tell Rovo what to do"** box
+- In the list version, Rovo **wrote the questions as text** instead
+
+So the instruction needs to say: **use the card, and don't write the questions as text.**
+
+**Replace Mode A with this:**
+> **A: inputs missing.**
+> 🃏 **ASK USING THE QUESTION CARD:** use your **clarifying question tool** (the question card with selectable options).
+> - Do **NOT** write the questions as text in your reply.
+> - Ask only for the **missing** inputs, **one question per card page** (max 4).
+> - Give each question **up to 3 options**. The user can type anything else in the box.
+>
+> | Q | Question | Options |
+> |---|---|---|
+> | 1 | Which Jira project? | BTFM |
+> | 2 | Which release version? | 3 most recent versions in PROJECT |
+> | 3 | Which label? | RetirementReleaseTicket · skip |
+> | 4 | Where should I put the draft? | Release Demo (link) · Rovo Agent Test-v0.2 (link) |
+>
+> After the card, **STOP**. Don't look anything up and don't create anything until the user answers.
+
+**Why "STOP" matters:** in the card run, Rovo showed the card **and then carried on** to draft a page. The card should be a red light, not a give-way sign. 🚦
+
+---
+
+**Limit test: measure it, don't guess** 📊
+
+Run *"Execute Release Doc Orchestrator v2"* in **5 new chats** and count:
+- 🃏 Card: __ / 5
+- 📝 Text list: __ / 5
+- 🚨 Jumped ahead: __ / 5
+
+If the card shows **4 or 5 times out of 5**, use it in the demo. If not, keep the one-line command as the safe route.
+
+**Your task:** Update Mode A, run the 5-chat test, and send me the score.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Ask using the question card (Mode A)           -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Card vs list + hard stop rules | 2026-11-24        -->
 <!-- ============================================================ -->
 
