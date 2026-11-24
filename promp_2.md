@@ -1,4 +1,63 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Interactive Orchestrator v2 (asks for inputs) | 2026-11-24 -->
+<!-- ============================================================ -->
+
+Yes, that's a better design. The user shouldn't need to remember a long command. They just say **"start"**, and the agent asks for what it needs, like a sat-nav asking "where to?" and then "did you mean…?" when it can't find the address. 🗺️
+
+**Replace the whole Orchestrator v2 page with this:**
+
+> ⚠️ **ROVO:** Instruction set. Execute, don't summarise.
+>
+> **Inputs:**
+> - PROJECT: Jira project key (e.g. BTFM)
+> - VERSION: release version (e.g. 1.11)
+> - LABEL: optional (e.g. RetirementReleaseTicket)
+> - PARENT_PAGE: link to the page the draft goes under
+>
+> 🔴 **MODES**
+> **A: inputs missing.** Ask ONLY for the missing ones, in this format, then stop:
+> > To build the release page I need:
+> > • PROJECT: Jira project key (e.g. BTFM)
+> > • VERSION: release version (e.g. 1.11)
+> > • LABEL: optional, type "skip" if none
+> > • PARENT_PAGE: paste the link of the page to put the draft under
+>
+> **B: something not found.** Never guess, never create anything. Say what failed and ask again:
+> - Project not found → "I can't find project <X>. Please check the key."
+> - Release ticket not found → "No release ticket for VERSION <X>. Did you mean: <closest 3 matches>?"
+> - More than one ticket → "I found several: <list>. Which one?"
+> - Parent page not found or not a link → "Please paste the **link** to a **published** page in a shared space."
+>
+> **C: all inputs found.** Confirm before building:
+> > Ready to build:
+> > • Release ticket: <KEY>: <summary>
+> > • Parent page: <title>
+> > Reply **yes** to continue.
+>
+> **D: user says yes.**
+> 1. Copy page "Release Template v1.0" as `Release VERSION – DRAFT (Rovo)` under PARENT_PAGE. Use the page **ID** from the link.
+> 2. If a page with that title already exists → ask: "A draft already exists. Use a new title, e.g. 'Release VERSION – DRAFT 2 (Rovo)'?"
+> 3. Reply with ONLY: the page link and `Next: open it, click Edit, run Release Doc Filler with RELEASE_TICKET = <KEY>`
+
+**Why Mode C (the confirmation)?** The copy is the one step that **creates** something. A quick "Ready to build?" stops a typo from creating pages in the wrong place, the same way a sat-nav shows the route before you drive off. ✅
+
+The last line of Mode D also helps the people at the demo: the agent **tells them the next lap**, so nobody needs to remember the relay.
+
+---
+
+**Your task:** Test it three ways, each in a new chat:
+1. Type only **"Execute Release Doc Orchestrator v2"**. It should ask for all 4 inputs.
+2. Give **VERSION = 9.99**. It should say "not found" and suggest close matches.
+3. Give all the correct inputs, with the **Release Demo link**. It should show the confirmation, then build the page.
+
+Send me ✅ or ❌ for each.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Interactive Orchestrator v2                    -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Dry run – pre-flight + Lap 1 | 2026-11-24          -->
 <!-- ============================================================ -->
 
