@@ -1,4 +1,36 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Template lock – use one exact page ID | 2026-11-24 -->
+<!-- ============================================================ -->
+
+Lock the agent to **one exact address**, not a name. 📍 Right now the orchestrator says *copy "Release Template v1.0"*, so Rovo **searches by name** and can grab look-alikes: "Release X.X", "Copy of Release X.X", old drafts. It's like saying "drive to the blue garage" when there are several blue garages. A **page ID** is the exact postcode, so there's only one.
+
+**Step 1: get the template's page ID**
+Open **Release Template v1.0**. The URL looks like:
+`…/wiki/spaces/~7812621/pages/`**`1234567890`**`/Release+Template+v1.0`
+That number is the ID. Copy the **full link**.
+
+**Step 2: add a template lock to the orchestrator**, under the HARD RULES:
+> 🔒 **TEMPLATE LOCK:**
+> - The ONLY template is this page: **<paste the full link>** (page ID **<number>**).
+> - Use this link. **Never search for a template by name.**
+> - Before copying, check that the page is titled **"Release Template v1.0"** and sits inside the **"Release templates"** folder. If not, stop and reply: `TEMPLATE_NOT_FOUND: check the template link`
+> - Never use "Release X.X", any "Copy of…" page, or any other release page as a template.
+
+**Bonus:** do the same for the **agent pages**. In the orchestrator's steps, replace each name ("Agent 02 – Useful Links"…) with its **link**. Then Rovo can't run the old "Release Doc Orchestrator" by mistake either.
+
+⚠️ **One catch:** when you move the folder to the shared space, **the links stay the same** (Confluence keeps page IDs when pages move). If you **copy** the folder instead, the copies get **new IDs**, and you'd need to update the links.
+
+**Your task:** Add the template lock with the link, then test it in a new chat:
+> Execute Release Doc Orchestrator v2 with PROJECT = BTFM, VERSION = 1.11, LABEL = RetirementReleaseTicket, PARENT_PAGE = <Release Demo link>
+
+Check that the draft shows the **blue banners and the Jira table**. That's proof it used the right template.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Template lock                                  -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Ask using the question card (Mode A) | 2026-11-24  -->
 <!-- ============================================================ -->
 
