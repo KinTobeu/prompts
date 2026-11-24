@@ -1,4 +1,43 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Orchestrator v2 review – Mode B [X] placement | 2026-11-24 -->
+<!-- ============================================================ -->
+
+**Nearly perfect.** 🏁 Most of it is right now:
+
+| Section | |
+|---|---|
+| HARD RULES at the top | ✅ |
+| TEMPLATE LOCK with a real link | ✅ |
+| Mode C: `[KEY]: [summary]`, `[title]` | ✅ |
+| Mode D step 1: uses the TEMPLATE LOCK | ✅ |
+| **Mode B** | ⚠️ **`[X]` is in the wrong place** |
+
+**The Mode B mix-up:** `[X]` went in **where the arrow (→) was**, not into the gap in the message. So it still reads:
+> Project not found **[X]** "I can't find project **.** Please check the key."
+
+Rovo would still say *"I can't find project ."* with no name. The label is on the wrong part of the car. 🚗🏷️
+
+**Retype the 4 Mode B lines exactly like this:**
+- Project not found → "I can't find project **[X]**. Please check the key."
+- Release ticket not found → "No release ticket for VERSION **[X]**. Did you mean: [closest 3 matches]?"
+- More than one ticket → "I found several: [list]. Which one?"
+- Parent page not found or not a link → "Please paste the **link** to a **published** page in a shared space."
+
+**Small polish: Q4 options in the table.** They say *"Release Demo (link)"*, which is just the word "link". Paste the **real links** into that cell so Rovo can offer them as options.
+
+**⚠️ Last step:** top right still shows **"Saved"** and **Update**. That's only a draft, and Rovo reads the **published** version. Click **Update**, or none of these fixes count. 👀
+
+**Your task:** Fix Mode B, paste the real links into Q4, click **Update**, and then run the test in a new chat:
+> Execute Release Doc Orchestrator v2 with PROJECT = BTFM, VERSION = 1.11, LABEL = RetirementReleaseTicket, PARENT_PAGE = [Release Demo link]
+
+Do you get **"Ready to build: BTFM-13034: …"**, and does it wait for **yes**?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Orchestrator v2 review                         -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Five remaining placeholder fixes | 2026-11-24      -->
 <!-- ============================================================ -->
 
