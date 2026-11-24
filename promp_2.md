@@ -1,4 +1,41 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Five remaining placeholder fixes | 2026-11-24      -->
+<!-- ============================================================ -->
+
+You're nearly there: `[title]` and `[KEY]` are fixed. ✅ **Five spots are still missing their placeholders.** Copy these lines in exactly:
+
+**Mode B:**
+1. *"I can't find project **.** Please check the key."* → replace with:
+   > "I can't find project **[X]**. Please check the key."
+2. *"No release ticket for VERSION **.** Did you mean: <closest 3 matches>?"* → replace with:
+   > "No release ticket for VERSION **[X]**. Did you mean: **[closest 3 matches]**?"
+3. *"I found several: **.** Which one?"* → replace with:
+   > "I found several: **[list]**. Which one?"
+
+**Mode C:**
+
+4. *"Release ticket: **:**"* → replace with:
+   > Release ticket: **[KEY]: [summary]**
+
+**Mode D, step 1:**
+
+5. It still says *Copy page "Release Template v1.0"*. That's **by name**, so the lock isn't used. Replace it with:
+   > 1. Copy **the template from the TEMPLATE LOCK** as `Release VERSION – DRAFT (Rovo)` under PARENT_PAGE. Use the page ID from the link.
+
+💡 **Tip:** type the `[` `]` brackets **by hand**. If you paste them, Confluence sometimes turns them into links or code. 🔧
+
+**Then run two quick checks:**
+- Search the page for **"hard"**. You should see **1/1** (the HARD RULES block at the top). I can't see the top of the page in this screenshot.
+- Search for **"<"**. You should see **0/0**.
+
+**Your task:** Make the five fixes, run both searches, and then do the new-chat test with the one-line command. Does it show **"Ready to build: BTFM-13034: …"** with all the values filled in?
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Five remaining placeholder fixes               -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Where to add HARD RULES + bracket bug | 2026-11-24 -->
 <!-- ============================================================ -->
 
