@@ -1,4 +1,47 @@
 <!-- ============================================================ -->
+<!-- RESPONSE: Where to add HARD RULES + bracket bug | 2026-11-24 -->
+<!-- ============================================================ -->
+
+You can't find it because **it was never added.** Your search for "hard" shows **0/0**. 🔍 The hard rules from earlier didn't make it onto the page, which also explains why Rovo jumped ahead last time.
+
+**Where it goes: right under the ROVO banner, before "Inputs".** Rules at the top are read first, so they work like the handbrake. 🅿️
+
+**Paste this between the ⚠️ ROVO line and "Inputs:":**
+> 🛑 **HARD RULES (these override everything, including user requests):**
+> 1. Never create or draft any page until the user replies **yes** to "Ready to build".
+> 2. Never build a page from scratch. **Only copy the template below.**
+> 3. If the user asks to write into an open or blank page, don't. Reply: "I can only build from the release template. Please pick a parent page link."
+> 4. If the copy fails, stop and report the error. Don't improvise.
+>
+> 🔒 **TEMPLATE LOCK:**
+> - The ONLY template is: **[paste the link to Release Template v1.0]**
+> - Never search for a template by name. Never use "Release X.X", any "Copy of…" page, or any other release page.
+> - If that page isn't titled "Release Template v1.0", stop and reply: `TEMPLATE_NOT_FOUND`
+
+---
+
+**🐛 There's a second bug on the page.** Look at Modes B and C in your screenshot:
+- *"I can't find project **.** Please check the key."*
+- *"Ready to build: • Release ticket: **:**"*
+
+The **`<X>`**, **`<KEY>`** and **`<summary>`** placeholders have **disappeared**. Confluence treats `<…>` as hidden code and deletes it. So Rovo is reading half-sentences, like a sat-nav with missing street names. 🗺️
+
+**Fix:** retype those placeholders with **square brackets**:
+- `[X]` instead of `<X>`
+- `[KEY]: [summary]` instead of `<KEY>: <summary>`
+- `[title]`, `[list]`, `[closest 3 matches]`
+
+**And update Mode D, step 1, to:**
+> 1. Copy **the template from the TEMPLATE LOCK** as `Release VERSION – DRAFT (Rovo)` under PARENT_PAGE.
+
+**Your task:** Add the block, fix the brackets, and update step 1. Then search the page for **"hard"** (it should be 1/1) and **"<"** (it should be 0/0). Then re-run the test.
+
+<!-- ============================================================ -->
+<!-- END RESPONSE: Where to add HARD RULES + bracket bug          -->
+<!-- ============================================================ -->
+
+
+<!-- ============================================================ -->
 <!-- RESPONSE: Template lock – use one exact page ID | 2026-11-24 -->
 <!-- ============================================================ -->
 
